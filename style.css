@@ -1,0 +1,117 @@
+header{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home-link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+nav {
+
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 50px;
+    
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.catalogo {
+  margin-bottom: 32px;
+}
+
+.catalogo h2, .carrinho h2 {
+  font-size: 1.5rem;
+  color: #2d2d2d;
+  margin-bottom: 16px;
+}
+
+.produto {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.produto h3 {
+  margin: 0;
+  color: #0077ff;
+}
+
+.produto p {
+  margin: 0 0 8px 0;
+  color: #444;
+}
+
+.produto button {
+  align-self: flex-end;
+  background: linear-gradient(90deg, #0077ff 0%, #00c6ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.produto button:hover {
+  background: linear-gradient(90deg, #005bb5 0%, #0099cc 100%);
+}
+
+.carrinho {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 20px;
+}
+.carrinho button { 
+  align-self: flex-end;
+  background: linear-gradient(90deg, #0077ff 0%, #00c6ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+
+}
+ .carrinho button:hover {
+  background: linear-gradient(90deg, #005bb5 0%, #0099cc 100%);
+}
+
+
+
+#lista-carrinho {
+  list-style: none;
+  padding: 0;
+}
+#lista-carrinho li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;  
+  color: #333;
+}
