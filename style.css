@@ -144,12 +144,15 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
+    /* Define uma altura fixa ou proporção */
+    height: 300px; /* ou use aspect-ratio */
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover; /* ou contain, dependendo do efeito desejado */
 }
 
 .gallery-item:hover {
