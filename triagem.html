@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triagem</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
+
 <body>
     <!-- Navbar -->
     <header class="navbar">
@@ -28,100 +30,75 @@
             <p>Aqui você encontra os critérios e etapas para a triagem correta.</p>
         </div>
 
-<form action="/action_page.php" method="post">
+<form id="triagemForm">
     <div class="info-box">
-    <h2>Nome da empresa</h2>
-    <div>
-        <label for="nome"></label>
-        <input type="text" id="nome" name="nome" required>
+        <h2>Nome da empresa</h2>
+        <div>
+            <input type="text" name="empresa" required>
+        </div>
+
+        <h2>Responsável pela inscrição</h2>
+        <div>
+            <input type="text" name="responsavel" required>
+        </div>
+
+        <h2>E-mail corporativo</h2>
+        <div>
+            <input type="email" name="email" required>
+        </div>
+
+        <h2>Telefone/Whatsapp</h2>
+        <div>
+            <input type="text" name="telefone" required>
+        </div>
+
+        <h2>CNPJ</h2>
+        <div>
+            <input type="text" name="cnpj" required>
+        </div>
+
+        <h2>Já possui vínculo com o Ibmec Hubs?</h2>
+        <div>
+            <select name="vinculo" required>
+                <option value="">Selecione...</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+        </div>
+
+        <h2>Porte da empresa</h2>
+        <div>
+            <select name="porte" required>
+                <option value="">Selecione...</option>
+                <option value="mei">MEI</option>
+                <option value="pequena">Pequena</option>
+                <option value="media">Média</option>
+                <option value="grande">Grande</option>
+            </select>
+        </div>
+
+        <h2>Área de atuação</h2>
+        <div>
+            <input type="text" name="area" required>
+        </div>
+
+        <h2>Qual o tipo de demanda da empresa?</h2>
+        <div>
+            <textarea name="demanda" rows="4" required></textarea>
+        </div>
+
+        <h2>Objetivos prioritários na parceria</h2>
+        <div>
+            <textarea name="objetivos" rows="4" required></textarea>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <input type="submit" value="Enviar Triagem" style="padding: 12px 30px;">
+            <input type="reset" value="Limpar" style="padding: 12px 30px; margin-left: 15px;">
+        </div>
     </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
-    <h2>Reponsável pela inscrição</h2>
-    <div>
-        <label for="email"></label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
-    <h2>E-mail corporativo</h2>
-    <div>
-        <label for="nome"></label>
-        <input type="text" id="nome" name="nome" required>
-    </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
-    <h2>Telefone/Whatsapp</h2>
-    <div>
-        <label for="nome"></label>
-        <input type="text" id="nome" name="nome" required>
-    </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
-    <h2>CNPJ</h2>
-    <div>
-        <label for="nome"></label>
-        <input type="text" id="nome" name="nome" required>
-    </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
-    <h2>Já possui vínculo com o Ibmec Hubs?</h2>
-    <div>
-        <label for="nome"></label>
-        <input type="text" id="nome" name="nome" required>
-    </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
-    <h2>Porte da empresa</h2>
-    <div>
-        <label for="nome"></label>
-        <input type="text" id="nome" name="nome" required>
-    </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
-    <h2>Nome da empresa</h2>
-    <div>
-        <label for="nome"></label>
-        <input type="text" id="nome" name="nome" required>
-    </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
-    <h2>Área de atuação</h2>
-    <div>
-        <label for="nome"></label>
-        <input type="text" id="nome" name="nome" required>
-    </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
-    <h2>Qual o tipo de demanda da empresa?</h2>
-    <div>
-        <label for="nome"></label>
-        <input type="text" id="nome" name="nome" required>
-    </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
-    <h2>Objetivos prioritários na parceria</h2>
-    <div>
-        <label for="nome"></label>
-        <input type="text" id="nome" name="nome" required>
-    </div>
-    <input type="submit" name="submit">
-    <input type="reset" name="reset">
-    </div>
-</form>
-  
+</form>  
             
-           
-
-       
-            
-
-            
-
-        
-
-            
-
             
             <h2>Objetivos prioritários na parceria</h2>
         </div>
@@ -131,5 +108,6 @@
     <footer class="footer">
         &copy; Pronto para crescer com o Ibmec Hubs? Envie sua triagem e vamos construir juntos a próxima fase da sua empresa.
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
