@@ -1,62 +1,48 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site vanilla</title>
-</head>
-<link rel="stylesheet" href="style.css">
-
-<body>
-    <header> 
-         <div class="site-title">Vanilla Investiments</div>
-
-     <nav>
-            <a href="index(vanilla).html">Home</a> |
-            <a href="sobre(vanilla).html">Sobre</a> |
-            <a href="contato(vanilla).html">Contato</a>
-        </nav>
-    </header>
-
-   <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Vanilla</title>
+    <title>Início</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Cabeçalho -->
+    <header class="navbar">
+        <div class="logo">Ibchanges</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index(vanilla).html" class="active">Início</a></li>
+                <li><a href="triagem.html">Triagem de Empresas</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="depoimentos.html">Depoimentos</a></li>
+                <li><a href="regras.html">Regras de Uso</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Site Vanilla</h1>
-    <p>Renove e projete sua vida. Invista em Vanilla.</p>
-
-    <main> 
-        <section class="catalogo">
-            <h2>Catálogo</h2>
-
-            <div class="produto">
-                <h3>Vanilla Alpha</h3>
-                <p>Rendimento: 10% ao ano</p>
-                <button onclick="adicionarCarrinho('Tesouro Selic')">Adicionar ao carrinho</button>
-            </div>
-
-            <div class="produto">
-                <h3>Vanilla Beta</h3>
-                <p>Rendimento: 15% ao ano</p>
-                <button onclick="adicionarCarrinho('Tesouro IPCA')">Adicionar ao carrinho</button>
-            </div>
+    <!-- Conteúdo principal -->
+    <main class="content">
+        <section class="intro-box">
+            <h1>Bem-vindo à Ibchanges</h1>
+            <p>Plataforma empreendedora voltada para a inovação e o desenvolvimento de empresas.</p>
+            <p>Conectamos negócios ao futuro do mercado, estimulando ideias e transformando oportunidades.</p>
         </section>
 
-        <section class="carrinho">
-            <h2>Carrinho de Compras</h2>
-            <ul id="carrinho-lista"></ul>
-            <p id="total">Total: R$0,00</p>
-            <button onclick="finalizarCompra()">Finalizar compra</button>
+        <section class="info-box">
+            <h2>O que é a Ibchanges?</h2>
+            <p>A Ibchanges é uma plataforma criada para impulsionar empresas inovadoras, promovendo conexões estratégicas e oportunidades de crescimento. Nosso foco é transformar ideias em impacto real no mercado.</p>
+        </section>
+
+        <section class="info-box">
+            <h2>Como Funciona</h2>
+            <p>Por meio da triagem de empresas e da integração com parceiros estratégicos, a Ibchanges auxilia no desenvolvimento de negócios promissores, oferecendo suporte, visibilidade e conexões transformadoras.</p>
         </section>
     </main>
 
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© 2025 Ibchanges — Plataforma empreendedora para aproximar empresas inovadoras do futuro dos negócios. Sua jornada começa agora.</p>
+    </footer>
 </body>
 </html>
-<footer> 
-    <p> &copy 2025 vanilla investments</p>
-</footer>

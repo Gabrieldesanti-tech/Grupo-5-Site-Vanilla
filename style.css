@@ -1,117 +1,204 @@
-header{
-    background-color: rgb(255, 255, 255);
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Fundo geral */
+body {
+    background-color: #eaf2f4; /* azul clarinho */
+    color: #1c1c1c;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    padding: 0 20px;
+    padding: 20px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.site-title {
-  font-size: 2rem;
-  font-weight: bold;
+.logo {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #0a3a60;
 }
 
-.home-link {
-  font-size: 1rem;
-  text-decoration: none;
-  color: #333;
-}
-nav {
-
-    background-color: rgb(255, 255, 255);
+.nav-links {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items:center;
-    height: 50px;
-    
+    gap: 30px;
 }
 
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
-.catalogo {
-  margin-bottom: 32px;
+.nav-links a:hover,
+.nav-links a.active {
+    color: #0a3a60;
 }
 
-.catalogo h2, .carrinho h2 {
-  font-size: 1.5rem;
-  color: #2d2d2d;
-  margin-bottom: 16px;
+/* Conteúdo principal */
+.content {
+    padding: 60px 80px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-.produto {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  padding: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+/* Caixas brancas */
+.info-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
 }
 
-.produto h3 {
-  margin: 0;
-  color: #0077ff;
+/* Títulos e textos */
+.intro-box h1 {
+    color: #0a3a60;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.produto p {
-  margin: 0 0 8px 0;
-  color: #444;
+.intro-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.produto button {
-  align-self: flex-end;
-  background: linear-gradient(90deg, #0077ff 0%, #00c6ff 100%);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.produto button:hover {
-  background: linear-gradient(90deg, #005bb5 0%, #0099cc 100%);
+.info-box h2 {
+    color: #0a3a60;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-.carrinho {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  padding: 20px;
-}
-.carrinho button { 
-  align-self: flex-end;
-  background: linear-gradient(90deg, #0077ff 0%, #00c6ff 100%);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-
-}
- .carrinho button:hover {
-  background: linear-gradient(90deg, #005bb5 0%, #0099cc 100%);
+.info-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
 }
 
-
-
-#lista-carrinho {
-  list-style: none;
-  padding: 0;
+/* Rodapé */
+.footer {
+    background-color: #0a3a60;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+    margin-top: 60px;
 }
-#lista-carrinho li {
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;  
-  color: #333;
+
+/* Caixa de regras numeradas */
+.info-box h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Número da regra em círculo */
+.info-box h2::before {
+    content: counter(rule);
+    counter-increment: rule;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #0a3a60;
+    color: white;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+/* Reinicia contador em cada página */
+.content {
+    counter-reset: rule;
+}
+
+/* Galeria */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Depoimentos */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.testimonial-item {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.testimonial-item span {
+    font-weight: 600;
+    color: #0a3a60;
+}
+/* Faz o body ocupar a tela toda e organiza conteúdo com flex */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Faz o conteúdo principal crescer para empurrar o footer pra baixo */
+.content {
+    flex: 1;
+}
+
+/* Rodapé continua igual */
+.footer {
+    background-color: #0a3a60;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
 }
